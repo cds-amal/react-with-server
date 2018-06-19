@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom'
 
 ReactDOM.render(
   <div id="demo" className="bg-blue column center-xy fill-xy">
-    <h1>Ready to Contain</h1>
+    <h1>Ready to Contain儿</h1>
     <div>(⌐■_■)</div>
   </div>,
   document.getElementById('app')
