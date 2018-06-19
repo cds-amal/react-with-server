@@ -6,12 +6,15 @@ services:
     build:
       context: .
       dockerfile: ./docker/node.dockerfile
-    # entrypoint: ["/bin/sh", "initialize.sh"]
-    entrypoint: ["ls", "-la", "/code"]
+    entrypoint: ["/code/initialize.sh"]
     ports:
      - "3000:3000"
 
     volumes:
       - type: bind
-        source: /Users/marcus/dev/docker/react-server
+
+        # Resolve to full path of current directory
+        source: /Users/cds/dev/react-with-server
+
+        # Mount point on guest
         target: /code
