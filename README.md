@@ -31,3 +31,9 @@ Commands:
  * `docker-compose up -d` # build in daemon mode.
  *  `docker-compose start`
  *  `docker-compose stop`
+
+Visit [localhost:3000](http://localhost:3000) to view. Make changes in your
+code, and hit refresh.
+
+* Known issues - docker for mac old versions seem to have a problem mounting
+    folders not on boot drive :(
