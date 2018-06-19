@@ -1,4 +1,4 @@
-version: "3.6"
+version: "3.3"
 services:
   web:
     container_name: express_app
@@ -6,8 +6,12 @@ services:
     build:
       context: .
       dockerfile: ./docker/node.dockerfile
-    entrypoint: ["/bin/sh", "/code/initialize.sh"]
+    # entrypoint: ["/bin/sh", "initialize.sh"]
+    entrypoint: ["ls", "-la", "/code"]
     ports:
      - "3000:3000"
 
-    working_dir: /code
+    volumes:
+      - type: bind
+        source: /Users/marcus/dev/docker/react-server
+        target: /code
